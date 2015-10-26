@@ -1,0 +1,5 @@
+---
+# defaults file for openvswitch
+krast_bridge_name: br0
+krast_bridge_ip: 172.16.76.1
+krast_bridge_netmask: 255.255.255.0
