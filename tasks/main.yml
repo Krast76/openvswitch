@@ -2,3 +2,8 @@
 # tasks file for openvswitch
 - name: Include Centos File
   include: centos.yml
+  when: ansible_distribution == 'CentOS'
+
+- name: Include Debian File
+  include: debian.yml
+  when: ansible_distribution == 'Debian'
