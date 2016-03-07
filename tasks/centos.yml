@@ -1,5 +1,5 @@
 - name: install RDO dépôt for OpenVswitch
-  yum: name=https://repos.fedorapeople.org/repos/openstack/openstack-juno/rdo-release-juno-1.noarch.rpm state=present
+  yum: name={{ krast_ovs_repo }} state=present
 
 - name: install openvswitch
   yum: name=openvswitch state=present update_cache=yes
