@@ -9,5 +9,10 @@
      name: "openvswitch"
      state: present
 
+- name: Start openvswitch service
+  service:
+    name: openvswitch
+    state: started
+
 - name: configure bridge
   template: src=ifcfg-br.j2 dest=/etc/sysconfig/network-scripts/ifcfg-{{ krast_bridge_name }} owner=root mode="u=rw,g=r,o=r"
