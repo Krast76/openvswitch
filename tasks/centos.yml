@@ -1,5 +1,5 @@
-- name: install RDO dépôt for OpenVswitch
-  yum: name={{ krast_ovs_repo }} state=present
+- name: install openstack liberty repo for OpenVswitch
+  yum: name=centos-release-openstack-liberty state=present
 
 - name: install openvswitch
   yum: name=openvswitch state=present update_cache=yes
