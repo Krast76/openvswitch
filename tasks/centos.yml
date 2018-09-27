@@ -1,8 +1,8 @@
+- name: install openstack liberty repo for OpenVswitch
+  yum: name=centos-release-openstack-liberty state=present
+
 - name: install openvswitch
-  yum: 
-    name: openvswitch 
-    state: present 
-    update_cache: yes
+  yum: name=openvswitch state=present update_cache=yes
 
 - name: Enable openvswitch module
   modprobe:
@@ -15,3 +15,5 @@
      state: started
      enabled: yes
 
+- name: configure bridge
+  template: src=ifcfg-br.j2 dest=/etc/sysconfig/network-scripts/ifcfg-{{ krast_bridge_name }} owner=root mode="u=rw,g=r,o=r"
