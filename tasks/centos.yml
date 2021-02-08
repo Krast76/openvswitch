@@ -1,5 +1,5 @@
 - name: install openstack liberty repo for OpenVswitch
-  yum: name=centos-release-openstack-rocky state=present
+  yum: name=centos-release-openstack-train state=present
 
 - name: install openvswitch
   yum: name=openvswitch state=present update_cache=yes
